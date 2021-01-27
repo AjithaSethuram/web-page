@@ -1,0 +1,82 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <nav>
+          <label class="logo">ROYAL WATCH STORE</label>
+          <ul>
+            <li><a href="#">BRANDS</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">SMARTWATCHES </a></li>
+            <li><a href="#">OFFERS</a></li>
+          </ul>
+        </nav>
+     <p><b><h1><center>" The best thing about the future is that it comes or day at a time "</center></h1></b></p>
+     <p><center> Royal Watch Store is the largest chain of premium, fashion and Swiss watches in India offering </br>
+     more than 40 international brands across 44 cities in India.<br/>Royal has more than 92 watch stores and over 300 
+     watch experts who help people choose the best from the international watch brands.</br> </center></p>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="one.jpg" style=" max-height: 390; width: 80%;" >      
+                </div> 
+                <div class="mySlides fade">                 
+                  <img src="two.jpg" style="max-height: 390; width: 80%;">                  
+                </div>                
+                <div class="mySlides fade">                  
+                  <img src="three.jpg" style="max-height: 390; width: 80%;">                  
+                </div>
+                <div class="mySlides fade">                  
+                  <img src="four.jpg" style="max-height: 390; width: 80%;">                 
+                </div>
+                <div class="mySlides fade">                 
+                  <img src="five.jpg" style="max-height: 390; width: 80%;">                 
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+            
+    </body>
+</html>
